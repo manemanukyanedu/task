@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+    <title>Task</title>
+    
+  </head>
+  <body>
+   	<header>
+   		<div   class="banner">
+   			<div class="fixed">
+   				<nav class="navbar navbar-expand-lg">
+			 	<span class="decor-align"></span>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"><i class="material-icons">menu</i></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-auto  justify-content-end">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">Հաշիվներ <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+					  <a class="nav-link" href="#">Վարկեր</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" href="#">Ավանդներ</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" href="#">Քարտեր</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" href="#">Կոմունալ</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" href="#">Քաղվածքներ</a>
+								  </li>
+								  <li class="nav-item">
+								    <a class="nav-link" href="#">Այլ ծառայություններ</a>
+								  </li>
+								  <li class="nav-item">
+								    <span class="nav-link">EN|RU</span>
+								  </li>
+			    </ul>
+			   
+			  </div>
+			</nav>
+   			</div>
+			
+
+
+	   		<div class="shadow-layer">
+	   			<div class="logo"></div>
+	   		</div>
+	   		
+	   		<div class="user-prof">
+	   			<div class="avatar">
+	   				<div class="user-avatar"></div>
+	   			</div>
+	   			<div class="sing-in-out">
+	   				<sapn class="btn acc-color btn-md-long">Sign Out</sapn>
+	   			</div>
+	   			<span class="user-name">Հովհաննես Հովհաննիսյան</span>
+	   		</div>
+   		</div>
+   		<div class="header-border"></div>
+   	</header>
+   	<div class="container-fluid no-padding">
+   		<div class="row">
+   			<div class="col-lg-9 col-xl-9 no-padding">
+   				<main>
+			   		<div class="main-decor"></div>
+			   		
+			   		<div class="active-tab">
+			   			<div  class="container">
+			   				<div class="row">
+							    <div class="col-sm-4">
+							    	<div class="path-hld">
+							   			<ul>
+							   				<li class="path">
+							   					<a class="unstyled-link" href="#">Հիմնական</a><i class="fa fa-long-arrow-right"></i>
+							   				</li>
+							   				<li class="path">
+							   					<a href="#">Իմ Հաշիվները</a><i class="fa fa-long-arrow-right"></i>
+							   				</li>
+							   			</ul>
+							   		</div>
+							    </div>
+							    <div class="col-sm-8">
+							    	<h1>Իմ հաշիվները</h1>
+							    </div>
+							</div>
+			   			</div>
+
+			   			<ul class="tab-elements">
+			   				<li class="tab-element active">
+			   					<span class="  btn icon-right icon-ongo">գործող</span>
+			   				</li>
+			   				<li class="tab-element">
+			   					<span class="btn icon-right icon-closed">փակված</span>
+			   				</li>
+			   				<li class="tab-element">
+			   					<span class="btn icon-right icon-all">բոլորը</span>
+			   				</li>
+			   			</ul>
+			   			<hr class="decor-line">
+			   			<ul class="tab-elements">
+			   				<li class="tab-element">
+			   					<div class="left-icon-hld">
+			   						<i class="left-i fa fa-calendar"></i>
+			   						<i class="right-i fa fa-caret-down"></i>
+			   					</div>
+			   					<input class="icon-right " type="text" readonly value="Սեպտեմբեր 19, 2017"/>
+			   				</li>
+			   				<li class="tab-element">
+			   					<div class="left-icon-hld">
+			   						<i class="left-i fa fa-calendar"></i>
+			   						<i class="right-i fa fa-caret-down"></i>
+			   					</div>
+			   					<input class="icon-right " type="text" readonly value="Սեպտեմբեր 19, 2017"/>
+			   				</li>
+			   				<li class="tab-element">
+			   					<div class="left-icon-hld">
+			   						<i class="left-i  material-icons">search</i>
+			   					</div>
+			   					<input class="icon-right " type="search" value="" placeholder="Փնտրել"/>
+			   				</li>
+			   			</ul>
+			   			<div class="table-responsive-sm table-hld"> 
+			   				<table class="table">
+							    <thead class="thead-light">
+							      <tr>
+							        <th>Ամսաթիվ<i class="right-i fa fa-caret-down"></i></th>
+							        <th>Տեսակ<i class="right-i fa fa-caret-down"></i></th>
+							        <th>Հաշվեհամար<i class="right-i fa fa-caret-down"></i></th>
+							        <th>Կարգավիճակ<i class="right-i fa fa-caret-down"></i></th>
+							        <th>Արժույթ<i class="right-i fa fa-caret-down"></i></th>
+							        <th>Մնացորդ<i class="right-i fa fa-caret-down"></i></th>
+							      </tr>
+							    </thead>
+							    <tbody>
+							    	<tr>
+							        <td>01 11 2017</td>
+							        <td>քառտային (VISA EL) 1234567891234567</td>
+							        <td>1234/56/12345678</td>
+							        <td>ազատ է</td>
+							        <td>USA</td>
+							        <td>200,000.00 Դ</td>
+							      </tr>
+							      <tr>
+							        <td>01 11 2017</td>
+							        <td>քառտային (VISA EL) 1234567891234567</td>
+							        <td>1234/56/12345678</td>
+							        <td>ազատ է</td>
+							        <td>USA</td>
+							        <td>200,000.00 Դ</td>
+							      </tr>
+							      <tr>
+							        <td>01 11 2017</td>
+							        <td>քառտային (VISA EL) 1234567891234567</td>
+							        <td>1234/56/12345678</td>
+							        <td>ազատ է</td>
+							        <td>USA</td>
+							        <td>200,000.00 Դ</td>
+							      </tr>
+							      <tr>
+							        <td>01 11 2017</td>
+							        <td>քառտային (VISA EL) 1234567891234567</td>
+							        <td>1234/56/12345678</td>
+							        <td>ազատ է</td>
+							        <td>USA</td>
+							        <td>200,000.00 Դ</td>
+							      </tr>
+							      <tr>
+							        <td>01 11 2017</td>
+							        <td>քառտային (VISA EL) 1234567891234567</td>
+							        <td>1234/56/12345678</td>
+							        <td>ազատ է</td>
+							        <td>USA</td>
+							        <td>200,000.00 Դ</td>
+							      </tr>
+							      <tr>
+							       <td>01 11 2017</td>
+							        <td>քառտային (VISA EL) 1234567891234567</td>
+							        <td>1234/56/12345678</td>
+							        <td>ազատ է</td>
+							        <td>USA</td>
+							        <td>200,000.00 Դ</td>
+							      </tr>
+							      <tr>
+							        <td>01 11 2017</td>
+							        <td>քառտային (VISA EL) 1234567891234567</td>
+							        <td>1234/56/12345678</td>
+							        <td>ազատ է</td>
+							        <td>USA</td>
+							        <td>200,000.00 Դ</td>
+							      </tr>
+							    </tbody>
+						  </table>
+						  <ul class="pagination">
+							  <li class="page-item"><a class="page-link" href="#"><</a></li>
+							  <li class="page-item"><a class="page-link" href="#">1</a></li>
+							  <li class="page-item active"><a class="page-link" href="#">2</a></li>
+							  <li class="page-item"><a class="page-link" href="#">3</a></li>
+							  <li class="page-item"><a class="page-link" >...</a></li>
+							  <li class="page-item"><a class="page-link" href="#">></a></li>
+							</ul>
+						</div>
+			   		</div>
+			   		<div class="decor-panel-back"></div>
+			   		<div class="balance-actions">
+			   			<div class="container">
+						  <div class="row">
+						    <div class="col-md-2 balance-action">
+						      <span class="ba-icon i-1"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						      <span class="ba-icon i-2"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						     <span class="ba-icon i-3"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						      <span class="ba-icon i-4"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						      <span class="ba-icon i-5"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						     <span class="ba-icon i-6"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						  </div>
+						  <div class="row">
+						    <div class="col-md-2 balance-action">
+						      <span class="ba-icon i-7"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						      <span class="ba-icon i-8"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						     <span class="ba-icon i-9"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						      <span class="ba-icon  i-10"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						      <span class="ba-icon i-11"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						    <div class="col-md-2 balance-action">
+						     <span class="ba-icon i-12"></span>
+						      <p>Համալրել հաշիվը</p>
+						    </div>
+						  </div>
+						</div>
+			   		</div>
+			   	</main>
+   			</div>		
+   			<div class="col-lg-3 col-xl-3 aside-hld">
+   					<aside>
+				   		<div class="messages">
+				   			<span class="toggable icon-right">Հաղորդագրություններ<mark>2</mark><i class="right-i fa fa-caret-down"></i></span>
+				   			<ul>
+				   				<li>
+				   					<p>
+				   						Հունիսից գործելու են առցանց բանկի նոր սակագներ ․․․ 
+				   					</p>
+				   					<a class="more">Կարդալ ավելին</a>
+				   					<span class="date">02.11.2017</span>
+				   				</li>
+				   				<li>
+				   					<p>
+				   						Հունիսից գործելու են առցանց բանկի նոր սակագներ ․․․ 
+				   					</p>
+				   					<a class="more">Կարդալ ավելին</a>
+				   					<span class="date">02.11.2017</span>
+				   				</li>
+				   				<li>
+				   					<p>
+				   						Հունիսից գործելու են առցանց բանկի նոր սակագներ ․․․ 
+				   					</p>
+				   					<a class="more">Կարդալ ավելին</a>
+				   					<span class="date">02.11.2017</span>
+				   				</li>
+				   				<li>
+				   					<p>
+				   						Հունիսից գործելու են առցանց բանկի նոր սակագներ ․․․
+				   					</p>
+				   					<a class="more">Կարդալ ավելին</a>
+				   					<span class="date">02.11.2017</span>
+				   				</li>
+				   			</ul>
+				   		</div>
+				   	</aside>
+   			</div>		
+   		</div>
+   	</div>
+   	
+   
+   	<footer>
+   		<div class="container-fluid">
+		    <div class="row flex-hld">
+		      <div class="col-md-4 footer-nav">
+		      	<h5>Բանկի մասին</h5>
+		      	<a href="#">
+		      		Մասնաճյուղեր և բանկոմատներ  Բ
+		      	</a>
+		      	<a href="#">Նշանակալից մասնակիցներ</a>
+		      	<a href="#">Նշանակալից մասնակիցներ</a>
+		      	<a href="#">Նշանակալից մասնակիցներ</a>
+		      	<a href="#">Նշանակալից մասնակիցներ</a>
+		      	<a href="#">Նշանակալից մասնակիցներ</a>
+		      	<a href="#">Նշանակալից մասնակիցներ</a>
+		      	<a href="#">Նշանակալից մասնակիցներ</a>
+		      	<a href="#">Նշանակալից մասնակիցներ</a>
+		      </div>
+		      <div class="col-md-4 footer-nav ">
+		      	<h5>Էթիկա և գործարար</h5>
+		      	<a href="#">
+		      		Կորպորատիվ կառավարում 
+		      	</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      </div>
+		      <div class="col-md-4 footer-nav ">
+		      	<h5>Էթիկա և գործարար</h5>
+		      	<a href="#">
+		      		Կորպորատիվ կառավարում 
+		      	</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      	<a href="#">Բանկի վարչու</a>
+		      </div>
+		    </div>  
+		</div>
+		<div class="container-fluid">
+		    <div class="row flex-hld-cent">
+		      <div class="col-lg-3  footer-nav">
+		      	<span class="logo small-sample"></span>
+		      	<a href="#">© 2017 All rights reserved</a>
+		      	<span> Գլխավոր էջը թարմացվել 03.03.2017</span>
+		      </div>
+		      <div class="col-lg-3  footer-nav">
+		      	<span class="spec-info">+374 10 20 30 40</span>
+		      </div>
+		      <div class="col-lg-3  footer-nav">
+		      	<button class="btn left-icon">Առանց զանգ</button>
+		      </div>
+		      <div class="col-lg-3  footer-nav">
+		      	<span class="social soc-f"></span>
+		      	<span class="social soc-y"></span>
+		      	<span class="social soc-inst"></span>
+		      	<span class="social soc-tweet"></span>
+		      	<span class="social soc-in"></span>
+		      </div>
+		    </div>  
+		</div>
+   	</footer>
+  </body>
+</html>
+
+

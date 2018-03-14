@@ -1,0 +1,158 @@
+.unstyled-link(@color) {
+  & a, & a:visited, & a:hover, & a:active, & a:focus, & span {
+            text-transform: capitalize;
+            text-decoration: none;
+            color: @color;
+            font-family: @base-font;
+  }
+}
+
+.btn-acc (@padding: padding, @height: height, @font-size: font-size, @background: background, @hover-background: hover-background) {
+            padding: @padding;
+            line-height: @height;
+            margin: 1rem auto;
+            display: table;
+            font-size: @font-size;
+            border-radius: @font-size;
+            color: @nav-color-middle;
+          } 
+
+/* Make black and white */
+.grayscale(@perc: 100%) {
+  -webkit-filter: grayscale(@perc);
+  filter: grayscale(@perc);
+}
+
+
+/* Text overflow elipses */
+.tofe {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+/* Preventing selection */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+/* Font smooting */
+.smooting (@moz: grayscale, @webkit: antialiased) {
+  -moz-osx-font-smoothing: @moz;
+  font-smoothing: @webkit;
+  -webkit-font-smoothing: @webkit;
+}
+
+/* Scroler style */
+
+.scroller (@scrollbar-color, @scrollbar-width, @shadow-color, @shadow-width, @tumb) {
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 @shadow-width @shadow-color;
+    background-color: #F5F5F5;
+  }
+  &::-webkit-scrollbar {
+    width: @scrollbar-width;
+    height: @scrollbar-width;
+    background-color: @scrollbar-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: @tumb;
+  }
+}
+
+/* Responsivity rule */
+.responsive(@maxWidth; @rules) {
+  @media only screen and (max-width: @maxWidth) {
+    @rules();
+  }
+}
+
+
+.flex-display(@display: flex) {
+  display: ~"-webkit-@{display}";
+  display: ~"-ms-@{display}box";
+  display: ~"-ms-@{display}";
+  display: @display;
+}
+
+.justify-content(@justify: flex-start) {
+  -webkit-justify-content: @justify;
+  -ms-justify-content: @justify;
+  justify-content: @justify;
+}
+
+.align-items(@align: stretch) {
+  -webkit-align-items: @align;
+  -ms-align-items: @align;
+  align-items: @align;
+}
+
+.flex-basis(@width: auto) {
+  -webkit-flex-basis: @width;
+  -ms-flex-basis: @width;
+  flex-basis: @width;
+}
+
+.flex-wrap(@wrap: nowrap) {
+  -webkit-flex-wrap: @wrap;
+  -ms-flex-wrap: @wrap;
+  flex-wrap: @wrap;
+}
+
+/* icons */
+
+.icons-back (@url, @pos, @size, @repeat) {
+  background-image: url(@url);
+  background-position: @pos;
+  background-size: @size;
+  background-repeat: @repeat;
+}
+.background-order (@pos, @size, @repeat) {
+  background-position: @pos;
+  background-size: @size;
+  background-repeat: @repeat;
+}
+.background-order-advanced (@pos, @size, @repeat, @attachment, @url) {
+  background-position: @pos;
+  background-size: @size;
+  background-repeat: @repeat;
+  background-attachment:  @attachment;
+  background-image: @url;
+}
+
+/* List mixins */
+
+.ul-no-style {
+  list-style-type: none;
+  margin: 0;
+}
+
+/* Input fields */
+.placeholder(@rules) {
+    &::-webkit-input-placeholder {
+        @rules();
+    }
+    &:-moz-placeholder {
+        @rules();
+    }
+    &::-moz-placeholder {
+        @rules();
+    }
+    &:-ms-input-placeholder {
+        @rules();
+    }
+}
+
+/* Loops */
+
+/* @loop-iterations: 5;.class-loop (@loop-iterations); */
+/*.class-loop (@i) when (@i > 0) {
+    .i-@{i} {
+      background-image: url(../../images/icons/ac-"@{i}%".png);
+    }
+    .class-loop(@i - 1);
+}*/
