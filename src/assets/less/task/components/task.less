@@ -23,7 +23,7 @@ h1 {
   .responsive(1100px; {
     & {
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   });
 }
@@ -35,6 +35,7 @@ h1 {
   width: 100%;
   top: 1rem;
   right: 3rem;
+  z-index: 1;
   .responsive(1100px; {
     & {
       top: 1rem;
@@ -45,7 +46,7 @@ h1 {
 
 header {
   padding: 5rem 0 0 0;
-  .background-order-advanced(center, cover, no-repeat, fixed, url(../../../images/backgrounds/back-header.png));
+  .background-order-advanced(center, cover, no-repeat, fixed, url(~"@{backgrounds}/back-header.png"));
   .header-border {
     width: 100%;
     height: 4rem;
@@ -65,18 +66,39 @@ nav {
       }
   ul {
     li {
+      .transition-all(0.2s);
       background-color: @nav-color;
       &:hover, &.active {
         background-color: @nav-color-highlight;
       }
-      .unstyled-link(@base-color) ;
+      .unstyled-link(@base-color);
+      .responsive(992px; {
+        & {
+          background-color: @nav-color-middle;
+          padding-left: 2rem;
+        }
+        &:hover, &.active {
+          background-color: @nav-color-highlight-strong;
+        }
+      });
     }
+  }
+  .navbar-toggler {
+    outline: none !important;
+    .responsive(992px; {
+       & {
+          margin-top: -1rem;
+      }
+    });
+  }
+  .navbar-toggler-icon i {
+      font-size: 2.5rem;
   }
 }
 
 .shadow-layer {
   .background-order (top left, 100% 77%, no-repeat);
-  background-image: url(../../../images/backgrounds/shadow1.png);
+  background-image: url(~"@{backgrounds}/shadow1.png");
   padding: 1.5rem;
   margin-top: -1.5rem;
   width: 20rem;
@@ -86,9 +108,16 @@ nav {
   width: 16rem;
   height: 4rem;
   .background-order (center, contain, no-repeat);
-    background-image: url(../../../images/logos/logo.png);
+    background-image: url(~"@{logos}/logo.png");
 }
-
+.shadow-layer-2 {
+  .background-order (top left, 100% 77%, no-repeat);
+  background-image: url(~"@{backgrounds}/shadow2.png");
+  padding: 1.5rem;
+  margin-top: -1.5rem;
+  width: 40rem;
+  height: 20rem;
+}
 .user-prof {
   display: inline-block;
   margin-left: 15rem;
@@ -102,7 +131,7 @@ nav {
     padding: 1rem;
     .user-avatar {
       .background-order (center, contain, no-repeat);
-        background-image: url(../../../images/logos/avatar.png);
+        background-image: url(~"@{logos}/avatar.png");
         width: 8rem;
         height: 8rem;
       }
@@ -118,6 +147,9 @@ nav {
         border-radius: .5rem;
         border: 1px solid white;
         color: @base-color;
+        &:hover, &.focus {
+          background-color:@nav-color-highlight;
+        }
       }
     }
     .user-name {
@@ -144,11 +176,11 @@ nav {
   }
   .zig-zag-left {
     .background-order (left, 85%, no-repeat);
-    background-image: url(../../../images/backgrounds/angl-back-r.png);
+    background-image: url(~"@{backgrounds}/angl-back-r.png");
   }
   .zig-zag-right {
     .background-order (right, 85%, no-repeat);
-   background-image: url(../../../images/backgrounds/angl-back.png);
+   background-image: url(~"@{backgrounds}/angl-back.png");
   }
   .zig-zag-left, .zig-zag-right {
       .responsive(1100px; {
@@ -217,13 +249,13 @@ main {
     .icons-back ('', right, contain, no-repeat)
   }
   .icon-ongo {
-    background-image: url(../../../images/icons/ongoing.png);
+    background-image: url(~"@{icons}/ongoing.png");
   }
   .icon-closed {
-    background-image: url(../../../images/icons/closed.png);
+    background-image: url(~"@{icons}/closed.png");
   }
   .icon-all {
-    background-image: url(../../../images/icons/all.png);
+    background-image: url(~"@{icons}/all.png");
   }
   input {
     background-color:@nav-color-middle;
@@ -269,6 +301,9 @@ main {
   .thead-light {
     border-radius: .5rem;
   }
+  tbody tr:hover {
+    background-color: @button-color-alfa-m;
+  }
   .table td {
     line-height: 2rem;
     border-top: 1px solid;
@@ -304,10 +339,17 @@ main {
 
 .balance-actions {
   padding: 1.5rem;
+  .transition-all(0.2s);
   .background-order(center, cover, no-repeat);
   background-image: url(@ba-back);
   .balance-action {
     margin: 1rem 0;
+    &:hover {
+      text-shadow: 3px 1px 2px @base-dark-shadow;
+      .ba-icon {
+        opacity: 1;
+      }
+    }
   }
   p {
     text-align: center;
@@ -317,9 +359,11 @@ main {
     .background-order(center, cover, no-repeat);
     width: 4rem;
     height: 4rem;
+    opacity: .8;
     display: block;
     margin: 0 auto;
   }
+  .unstyled-link(@base-dark-color);
   .i-1 {
       background-image: url(../../../images/icons/ac-1.png);
     }
@@ -365,14 +409,14 @@ main {
   .messages {
     max-width: 18rem;
     background-color: @base-color;
-    border-radius: 1rem;
+    border-radius: .5rem;
     margin: 1rem auto;
     .toggable {
       width: 100%;
       line-height: 2rem;
       padding: 0 1rem;
       color: @base-color;
-      border-radius: .75rem .75rem 0 0;
+      border-radius: .5rem .5rem 0 0;
       display: inline-block;
       background-color:@button-color;
       mark {
@@ -464,25 +508,32 @@ footer {
   .social {
     width: 2.5rem;
     height: 2.5rem;
+    margin: .25rem;
+    opacity: .6;
+    .transition-all(0.2s);
     display: inline-block;
     .background-order (center, contain, no-repeat);
+    &:hover {
+      opacity: 1;
+    }
   }
   .soc-f {
-    background-image: url(../../../images/icons/soc-f.png);
+    background-image: url(~"@{icons}/soc-f.png");
   }
   .soc-y {
-    background-image: url(../../../images/icons/soc-y.png);
+    background-image: url(~"@{icons}/soc-y.png");
   }
   .soc-inst {
-    background-image: url(../../../images/icons/soc-inst.png);
+    background-image: url(~"@{icons}/soc-inst.png");
   }
   .soc-tweet {
-    background-image: url(../../../images/icons/soc-tweet.png);
+    background-image: url(~"@{icons}/soc-tweet.png");
   }
   .soc-in {
-    background-image: url(../../../images/icons/soc-in.png);
+    background-image: url(~"@{icons}/soc-in.png");
   }
 }
+
 .responsive(992px; {
     .aside-hld {
       padding-top: 1rem;
@@ -550,17 +601,26 @@ footer {
       width: 12rem;
       height: 3rem;
     }
+    .shadow-layer-2 {
+        width: 30rem;
+        height: 15rem;
+    }
     .user-prof {
       margin-left: 9rem;
+      .avatar {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        padding: .5rem;
+        .user-avatar {
+          width: 6rem;
+          height: 6rem;
+        }
+      }
+      .user-name {
+          margin-top: 1rem;
+      }
     }
-    .avatar {
-      width: 7rem;
-      height: 7rem;
-      border-radius: 50%;
-      padding: .5rem;
-    }
-    .user-avatar {
-      width: 6rem;
-      height: 6rem;
-    }
+    
+    
   });

@@ -14,7 +14,7 @@
             display: table;
             font-size: @font-size;
             border-radius: @font-size;
-            color: @nav-color-middle;
+            color: @base-color;
           } 
 
 /* Make black and white */
@@ -156,3 +156,10 @@
     }
     .class-loop(@i - 1);
 }*/
+
+.transition-all (@time: 0.5s, @property: all, @function: ease-in-out) {
+  -webkit-transition:@property @time @function;
+  -moz-transition:@property @time @function;
+  -o-transition:@property @time @function;
+  transition:@property @time @function;
+}
